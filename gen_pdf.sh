@@ -8,5 +8,8 @@ pandoc -s -f markdown+tex_math_single_backslash -t latex main.md chapters/*.md -
 
 #cp $filename.$ext ~/sf_D_DRIVE
 
-## sync to windows
-rsync -avh ../orb_slam2_notes ~/Workspace/cygwinWorkspace/markdown
+## sync to windows (using git instead)
+#rsync -avh ../orb_slam2_notes ~/Workspace/cygwinWorkspace/markdown
+# remove dst dir and clone the current one
+rm -rf ~/Workspace/cygwinWorkspace/markdown/$filename
+git clone . ~/Workspace/cygwinWorkspace/markdown/$filename
