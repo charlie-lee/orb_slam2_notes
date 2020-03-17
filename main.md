@@ -29,6 +29,7 @@ header-includes:
   ```{=latex}
   % math library
   \usepackage{mathtools}
+  \everymath{\displaystyle} % force display style
   
   % for subsections with more depths
   \usepackage{enumitem}
